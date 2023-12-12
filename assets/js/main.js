@@ -3,8 +3,7 @@ Utilizzando i dati forniti, creare un array di oggetti per rappresentare i membr
 Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.
 
 
-MILESTONE 2:
-Stampare le stesse informazioni su DOM sottoforma di stringhe
+
 BONUS 1:
 Trasformare la stringa foto in una immagine effettiva
 BONUS 2:
@@ -58,7 +57,27 @@ console.log(team);
 
 for (let i = 0; i < team.length; i++) {
     const member = team[i];
-    console.log(member.nome, member.ruolo, member.foto);    
+    console.log(member.nome);  
 }
 
 //MILESTONE 2: Stampare le stesse informazioni su DOM sottoforma di stringhe
+
+const containerEl = document.querySelector('.container');
+
+for (let i = 0; i < team.length; i++) {
+    const member = team[i];
+    const memberNameEl = document.createElement('div');
+    memberNameEl.className = 'col-4';
+    memberNameEl.innerHTML = (member.nome);
+    containerEl.append(memberNameEl);
+    const memberRoleEl = document.createElement('div');
+    memberRoleEl.className = 'col-4';
+    memberRoleEl.innerHTML = (member.ruolo);
+    containerEl.append(memberRoleEl);
+    const memberPicEl = document.createElement('div');
+    memberPicEl.className = 'col-4';
+    memberPicEl.innerHTML = (member.foto);
+    containerEl.append(memberPicEl);
+    console.log(typeof(member.foto));
+    
+}
