@@ -4,10 +4,7 @@ Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.
 
 
 
-BONUS 1:
-Trasformare la stringa foto in una immagine effettiva
-BONUS 2:
-Organizzare i singoli membri in card/schede
+
 
 Wayne Barnett	Founder & CEO	wayne-barnett-founder-ceo.jpg
 Angela Caroll	Chief Editor	angela-caroll-chief-editor.jpg
@@ -57,7 +54,9 @@ console.log(team);
 
 for (let i = 0; i < team.length; i++) {
     const member = team[i];
-    console.log(member.nome);  
+    //BONUS 1: Trasformare la stringa foto in una immagine effettiva
+    member.foto = 'https://picsum.photos/300/200';
+    console.log(member.foto);  
 }
 
 //MILESTONE 2: Stampare le stesse informazioni su DOM sottoforma di stringhe
@@ -78,6 +77,8 @@ for (let i = 0; i < team.length; i++) {
     memberPicEl.className = 'col-4';
     memberPicEl.innerHTML = (member.foto);
     containerEl.append(memberPicEl);
-    console.log(typeof(member.foto));
-    
+    console.log(typeof(member.foto));   
 }
+
+
+//BONUS 2: Organizzare i singoli membri in card/schede
