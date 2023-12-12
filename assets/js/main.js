@@ -73,19 +73,23 @@ const rowEl = document.querySelector('.row');
 
 for (let i = 0; i < team.length; i++) {
     const member = team[i];
-    const memberName = member.nome; //trying different things
+    const colCardEl = generateColMarkUp(member);
+    rowEl.insertAdjacentHTML("beforeend", colCardEl);
+}
 
-    //template Literam
-    const colCardEl = ` 
+function generateColMarkUp(employee) { 
+    const memberName = employee.nome; //trying different things
+    //template Literam 
+    const colMarkUp = ` 
         <div class="col">
             <div class="card">
-                <img src="${member.foto}" class="card-img-top" alt="...">
+                <img src="${employee.foto}" class="card-img-top" alt="...">
                 <div class="card-body bg-dark text-white">
                     <h5 class="card-title">${memberName}</h5>
-                    <p class="card-text text-light-emphasis fw-bolder">${member.ruolo}</p>
+                    <p class="card-text text-light-emphasis fw-bolder">${employee.ruolo}</p>
                 </div>
             </div>
         </div>
         `
-    rowEl.insertAdjacentHTML("beforeend", colCardEl);
+        return colMarkUp   
 }
