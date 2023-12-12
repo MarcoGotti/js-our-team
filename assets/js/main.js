@@ -47,8 +47,9 @@ const team = [
         foto: 'barbara-ramos-graphic-designer.jpg',
     },
 ];
-
 console.log(team);
+
+
 
 // MILESTONE 1: Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
 
@@ -56,12 +57,15 @@ for (let i = 0; i < team.length; i++) {
     const member = team[i];
     //BONUS 1: Trasformare la stringa foto in una immagine effettiva
     member.foto = 'https://picsum.photos/300/200';
-    console.log(member.foto);  
+    console.log(typeof(member.foto));  
 }
+
+
+
 
 //MILESTONE 2: Stampare le stesse informazioni su DOM sottoforma di stringhe
 
-const containerEl = document.querySelector('.container');
+/* const containerEl = document.querySelector('.container');
 
 for (let i = 0; i < team.length; i++) {
     const member = team[i];
@@ -78,7 +82,28 @@ for (let i = 0; i < team.length; i++) {
     memberPicEl.innerHTML = (member.foto);
     containerEl.append(memberPicEl);
     console.log(typeof(member.foto));   
-}
+} */
 
 
 //BONUS 2: Organizzare i singoli membri in card/schede
+
+const rowEl = document.querySelector('.row');
+
+for (let i = 0; i < team.length; i++) {
+    const member = team[i];
+    const memberName = member.nome; //trying different things
+
+    //template Literam
+    const colCardEl = ` 
+        <div class="col">
+            <div class="card">
+                <img src="${member.foto}" class="card-img-top" alt="...">
+                <div class="card-body bg-dark text-white">
+                    <h5 class="card-title">${memberName}</h5>
+                    <p class="card-text text-light-emphasis fw-bolder">${member.ruolo}</p>
+                </div>
+            </div>
+        </div>
+        `
+    rowEl.insertAdjacentHTML("beforeend", colCardEl);
+}
