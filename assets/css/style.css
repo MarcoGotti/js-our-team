@@ -1,0 +1,23 @@
+.bg_orange {
+    background-color: rgb(164, 100, 5);
+}
+
+.nav-link, a {
+    color: rgb(164, 100, 5);
+    text-decoration: none;
+}
+
+.nav-link:hover{
+    color: rgb(164, 100, 5);
+    transform: scale(1.1);
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    filter: brightness(120%);   
+}
+.card {
+    border: 3px solid rgb(35, 35, 35);
+    transition: all 0.35s ease-in-out;
+ }
