@@ -19,32 +19,32 @@ const team = [
     {
         nome: 'Wayne Barnett',
         ruolo: 'Founder & CEO',
-        foto: 'wayne-barnett-founder-ceo.jpg',
+        foto: './assets/img/wayne-barnett-founder-ceo.jpg',
     },
     {
         nome: 'Angela Caroll',
         ruolo: 'Chief Editor',
-        foto: 'angela-caroll-chief-editor.jpg',
+        foto: './assets/img/angela-caroll-chief-editor.jpg',
     } ,
     {
         nome: 'Walter Gordon',
         ruolo: 'Office Manager',
-        foto: 'walter-gordon-office-manager.jpg',
+        foto: './assets/img/walter-gordon-office-manager.jpg',
     },
     {
         nome: 'Angela Lopez',
         ruolo: 'Social Media Manager',
-        foto: 'angela-lopez-social-media-manager.jpg',
+        foto: './assets/img/angela-lopez-social-media-manager.jpg',
     },
     {
         nome: 'Scott Estrada',
         ruolo: 'Developer',
-        foto: 'scott-estrada-developer.jpg',
+        foto: './assets/img/scott-estrada-developer.jpg',
     },
     {
         nome: 'Barbara Ramos',
         ruolo: 'Graphic Designer',
-        foto: 'barbara-ramos-graphic-designer.jpg',
+        foto: './assets/img/barbara-ramos-graphic-designer.jpg',
     },
 ];
 console.log(team);
@@ -56,8 +56,7 @@ console.log(team);
 for (let i = 0; i < team.length; i++) {
     const member = team[i];
     //BONUS 1: Trasformare la stringa foto in una immagine effettiva
-    member.foto = 'https://picsum.photos/300/200';
-    console.log(typeof(member.foto));  
+    //member.foto = 'https://picsum.photos/300/200';     
 }
 
 
